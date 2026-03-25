@@ -78,6 +78,7 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { Sidebar } from "@/components/ui/sidebar"// Aapka sidebar component
 import CustomPagination from "@/components/CustomPagination"
+import Landing from "@/components/Landing"
 //  import { Button } from "@/components/ui/button"
 
 export default function Page() {
@@ -89,11 +90,14 @@ export default function Page() {
         <main className="flex-1 p-6">
           <SidebarTrigger />
           {/* Aapka baaki ka content yahan aayega */}
-          <h1 className="text-2xl font-bold">100/100 Score Dashboard</h1>
+        <h1 className="text-2xl font-bold ">TEMPLATE with schadn</h1>
         </main>
+          
       </div>
+    
     </SidebarProvider>
-    <CustomPagination/>
+   <Landing/>
+  <CustomPagination/>
     </>
   )
 }

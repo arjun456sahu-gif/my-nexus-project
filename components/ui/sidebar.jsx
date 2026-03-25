@@ -267,6 +267,7 @@ function SidebarRail({
         className
       )}
       {...props} />
+      
   );
 }
 
