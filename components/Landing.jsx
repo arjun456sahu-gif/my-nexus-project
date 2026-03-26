@@ -14,8 +14,8 @@ export default function Landing() {
     <section className="relative min-h-screen bg-[#020617] text-white flex flex-col items-center justify-center overflow-hidden px-6 py-20">
       
       {/* High-Performance Glows (Using CSS transform for speed) */}
-      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-[-10%] left-[-10%] w-125 h-125 bg-blue-600/15 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-125 h-125 bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
 
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
@@ -31,7 +31,7 @@ export default function Landing() {
           </span>
         </div>
 
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8 bg-gradient-to-b from-white via-white to-white/40 bg-clip-text text-transparent leading-[1.1]">
+        <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8 bg-linear-to-b from-white via-white to-white/40 bg-clip-text text-transparent leading-[1.1]">
           Templates with shadcn  <br /> <span className="text-blue-500">The Global Credit</span>
         </h1>
 
@@ -57,7 +57,7 @@ export default function Landing() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 1 }}
-        className="mt-24 z-10 w-full max-w-5xl min-h-[400px] rounded-[32px] border border-white/10 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-2xl p-10 shadow-2xl overflow-hidden"
+        className="mt-24 z-10 w-full max-w-5xl min-h-100 rounded-[32px] border border-white/10 bg-linear-to-br from-white/10 to-transparent backdrop-blur-2xl p-10 shadow-2xl overflow-hidden"
       >
          <div className="flex flex-col md:flex-row justify-between items-start gap-12 h-full">
             <div className="space-y-6">
@@ -66,14 +66,14 @@ export default function Landing() {
                </div>
                <div>
                   <h3 className="text-3xl font-bold mb-2">Secure Yield Pool</h3>
-                  <p className="text-gray-400 text-lg leading-snug max-w-[280px]">
+                  <p className="text-gray-400 text-lg leading-snug max-w-70">
                     Automated liquidity management with 0.01% slippage protocols.
                   </p>
                </div>
             </div>
             
             {/* Visual Graph with Animation */}
-            <div className="w-full flex-1 flex items-end justify-center h-[200px] md:h-full pb-4">
+            <div className="w-full flex-1 flex items-end justify-center h-50 md:h-full pb-4">
                <div className="w-full h-40 flex items-end gap-3 px-4 border-b border-white/5">
                   {[40, 75, 50, 95, 60, 85, 70, 90].map((h, i) => (
                     <motion.div 
@@ -81,7 +81,7 @@ export default function Landing() {
                       initial={{ height: 0 }} 
                       animate={{ height: `${h}%` }} 
                       transition={{ delay: 0.5 + (i * 0.1), duration: 0.8 }}
-                      className="flex-1 bg-gradient-to-t from-blue-500/40 via-blue-500/10 to-transparent rounded-t-md relative group"
+                      className="flex-1 bg-linear-to-t from-blue-500/40 via-blue-500/10 to-transparent rounded-t-md relative group"
                     >
                       <div className="absolute top-0 left-0 w-full h-1 bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
                     </motion.div>

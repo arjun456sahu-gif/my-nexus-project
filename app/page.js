@@ -84,20 +84,7 @@ import Landing from "@/components/Landing"
 export default function Page() {
   return (
     <>
-    <SidebarProvider>
-      <div className="flex min-h-screen">
-        <Sidebar/>
-        <main className="flex-1 p-6">
-          <SidebarTrigger />
-          {/* Aapka baaki ka content yahan aayega */}
-        <h1 className="text-2xl font-bold ">TEMPLATE with schadn</h1>
-        </main>
-          
-      </div>
-    
-    </SidebarProvider>
-   <Landing/>
-  <CustomPagination/>
+  <Landing/>
     </>
   )
 }
