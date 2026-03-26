@@ -75,16 +75,27 @@
 //     </div>
 //   );
 // }
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { Sidebar } from "@/components/ui/sidebar"// Aapka sidebar component
-import CustomPagination from "@/components/CustomPagination"
-import Landing from "@/components/Landing"
-//  import { Button } from "@/components/ui/button"
+// import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+// import { Sidebar } from "@/components/ui/sidebar"// Aapka sidebar component
+// import CustomPagination from "@/components/CustomPagination"
+"use client";
+import { useState } from "react";
+import Landing from "@/components/Landing";
+import Auth from "@/components/Auth";
 
 export default function Page() {
-  return (
-    <>
-  <Landing/>
-    </>
-  )
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // Jab user login kare, state ko true set karein
+  const handleLoginSuccess = () => {
+    setIsAuthenticated(true); // FIX: true set karna zaroori hai
+  };
+
+  // Agar authenticated nahi hai, toh Auth dikhao
+  if (!isAuthenticated) {
+    return <Auth onLogin={handleLoginSuccess} />; 
+  }
+
+  // Login hone ke baad hi Landing page dikhega
+  return <Landing />;
 }
